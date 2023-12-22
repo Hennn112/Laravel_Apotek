@@ -61,7 +61,6 @@ class MedicineController extends Controller
     public function edit($id)
     {
         $medicine = Medicine::find($id);
-
         return view('medicine.edit', compact('medicine'));
     }
 

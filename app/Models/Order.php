@@ -19,4 +19,10 @@ class Order extends Model
     protected $casts = [
         'medicines' => 'array',
     ];
+
+    public function user(){
+        //menghubungkan ke primary keynya
+        // dalam kurung merupakan nama model tempat penyimpanan dari PK nya si FK yang ada di model ini
+        return $this->belongsTo(User::class);
+    }
 }
